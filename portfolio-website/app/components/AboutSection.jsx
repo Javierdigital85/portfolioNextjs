@@ -10,15 +10,25 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Node.js</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Express</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>PostgreSQL</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Sequelize</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>JavaScript</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>React</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Nest</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>MongoDB</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Tailwind</li>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>TypeScript</li>
       </ul>
     ),
