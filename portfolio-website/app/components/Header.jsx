@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Picture from "../../public/images/javiFacebook.jpeg";
 import TypeWriter from "./TypeWriter";
-
+{/* eslint-disable-next-line react/no-unescaped-entities */}
 const Header = () => {
   return (
     <section className="lg:py-16">

@@ -44,7 +44,7 @@ const TAB_DATA = [
     ),
   },
 ];
-
+{/* eslint-disable-next-line react/no-unescaped-entities */}
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();

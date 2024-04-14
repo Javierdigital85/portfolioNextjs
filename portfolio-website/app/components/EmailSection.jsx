@@ -4,7 +4,7 @@ import Github from "../../public/github.svg";
 import LinkedIn from "../../public/linkedin.svg";
 import Link from "next/link";
 import Image from "next/image";
-
+{/* eslint-disable-next-line react/no-unescaped-entities */}
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [emailError, setEmailError] = useState(false);
