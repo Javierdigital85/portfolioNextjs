@@ -62,6 +62,7 @@ const AboutSection = () => {
           src="/images/nuevaimagen.avif"
           width={900}
           height={900}
+          alt="Lorenzo Javier Colodro's portrait"
           className="rounded"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
