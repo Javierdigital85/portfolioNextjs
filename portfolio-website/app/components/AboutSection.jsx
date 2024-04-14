@@ -10,25 +10,15 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Node.js</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Express</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>PostgreSQL</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Sequelize</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>JavaScript</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>React</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Nest</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>MongoDB</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>Tailwind</li>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <li>TypeScript</li>
       </ul>
     ),
@@ -54,7 +44,7 @@ const TAB_DATA = [
     ),
   },
 ];
-{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
@@ -78,10 +68,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-4">About Me </h2>
           <p className="text-base lg:text-lg">
-            I'm Lorenzo Javier Colodro and I'm excited to apply the skills I
-            acquired through an intensive JavaScript Bootcamp. My challenge is
-            to provide valuable contributions to any project I am involved in
-            and meet the needs of the company.
+            I&apos;m Lorenzo Javier Colodro and I&apos;m excited to apply the
+            skills I acquired through an intensive JavaScript Bootcamp. My
+            challenge is to provide valuable contributions to any project I am
+            involved in and meet the needs of the company.
           </p>
 
           <div className="flex flex-row justify-start mt-8">

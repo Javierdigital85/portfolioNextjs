@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Picture from "../../public/images/javiFacebook.jpeg";
 import TypeWriter from "./TypeWriter";
-{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 const Header = () => {
   return (
     <section className="lg:py-16">
@@ -10,13 +10,13 @@ const Header = () => {
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
-              Hello, I'm {""}
+              Hello, I&apos;m {""}
             </span>
             <br></br>
             <TypeWriter />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-           Welcome to my Portfolio!
+            Welcome to my Portfolio!
           </p>
           <div>
             {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 hover:bg-slate-200 text-white">

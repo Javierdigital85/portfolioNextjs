@@ -4,7 +4,7 @@ import Github from "../../public/github.svg";
 import LinkedIn from "../../public/linkedin.svg";
 import Link from "next/link";
 import Image from "next/image";
-{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [emailError, setEmailError] = useState(false);
@@ -56,9 +56,11 @@ const EmailSection = () => {
       id="contact"
     >
       <div>
-        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
+        <h5 className="text-xl font-bold text-white my-2">
+          Let&apos;s Connect
+        </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I'm currently looking for new opportunities
+          I&apos;m currently looking for new opportunities
         </p>
         <div className="socials flex flex-row gap-4">
           <Link href="https://github.com/Javierdigital85">
