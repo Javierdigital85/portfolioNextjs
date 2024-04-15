@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Picture from "../../public/images/javiFacebook.jpeg";
+import Picture from "../../public/images/profile.jpeg";
 import TypeWriter from "./TypeWriter";
 
 const Header = () => {
@@ -31,18 +31,33 @@ const Header = () => {
             </button>
           </div>
         </div>
+
         {/* IMAGEN */}
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Image
+                src={Picture}
+                alt="personal image"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* IMAGEN */}
+        {/* <div className="col-span-4 place-self-center mt-4 lg:mt-0">
+          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
             <Image
               src={Picture}
               alt="personal image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
-              width={400}
+              className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              width={200}
               height={300}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
