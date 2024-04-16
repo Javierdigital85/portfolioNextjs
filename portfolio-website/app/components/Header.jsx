@@ -19,9 +19,6 @@ const Header = () => {
             Welcome to my Portfolio!
           </p>
           <div>
-            {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 hover:bg-slate-200 text-white">
-              Hire me
-            </button> */}
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-blue-450 to-blue-500 hover:bg-slate-800 text-white mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 <a href="/javier.pdf" target="_blank" download="CVeng.pdf">
@@ -34,30 +31,17 @@ const Header = () => {
 
         {/* IMAGEN */}
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
+          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden rounded">
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src={Picture}
                 alt="personal image"
                 layout="fill"
-                objectFit="contain"
+                objectFit="cover"
               />
             </div>
           </div>
         </div>
-
-        {/* IMAGEN */}
-        {/* <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
-            <Image
-              src={Picture}
-              alt="personal image"
-              className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={200}
-              height={300}
-            />
-          </div>
-        </div> */}
       </div>
     </section>
   );
