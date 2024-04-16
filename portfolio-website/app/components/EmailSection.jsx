@@ -24,6 +24,12 @@ const EmailSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!data.email || !data.subject || !data.message) {
+      setEmailError(true);
+      return;
+    }
+
     const response = await fetch("/api/send", {
       method: "POST",
       headers: {
@@ -32,17 +38,12 @@ const EmailSection = () => {
       body: JSON.stringify(data),
     });
 
-    if (!data.email || !data.subject || !data.message) {
-      setEmailError(true);
-      return;
-    }
-
     if (response.status === 200) {
       console.log("Message sent");
       setData({
-        setEmail: "",
-        setSubject: "",
-        setMessage: "",
+        email: "",
+        subject: "",
+        message: "",
       });
 
       setEmailSubmitted(true);
@@ -50,6 +51,7 @@ const EmailSection = () => {
       console.log("no ha funcionado");
     }
   };
+
   return (
     <section
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
