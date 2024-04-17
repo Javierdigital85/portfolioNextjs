@@ -10,16 +10,20 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Redux</li>
         <li>Node.js</li>
         <li>Express</li>
         <li>PostgreSQL</li>
         <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
         <li>Nest</li>
         <li>MongoDB</li>
         <li>Tailwind</li>
+        <li>Bootstrap</li>
         <li>TypeScript</li>
+        <li>Postman</li>
+        <li>Docker</li>
       </ul>
     ),
   },
@@ -28,8 +32,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Plataforma 5, Coding Bootcamp</li>
-        <li>Cabin Crew Certification in Qatar Airways</li>
+        <li>Plataforma 5 Coding Bootcamp.</li>
+        <li>Cabin Crew Certification in Qatar Airways.</li>
       </ul>
     ),
   },
@@ -38,8 +42,9 @@ const TAB_DATA = [
     id: "certification",
     content: (
       <ul className="list-disc pl-2">
-        <li>5 years within Aviation industry.</li>
-        <li>2 years programming.</li>
+        <li>JavaScript Bootcamp.</li>
+        <li>Programación Web FullStack</li>
+        <li>Service Excellence Program & SEP Qatar Airways</li>
       </ul>
     ),
   },
@@ -56,24 +61,25 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white lg:h-[700px]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/nuevaimagen.avif"
           width={900}
           height={900}
           alt="Lorenzo Javier Colodro's portrait"
-          className="rounded"
+          className="rounded h-[850px] w-[650px] object-contain"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold mb-4">About Me </h2>
+          <h2 className="text-4xl font-bold mb-4 mt-10">About Me </h2>
           <p className="text-base lg:text-lg">
-            I&apos;m Lorenzo Javier Colodro and I&apos;m excited to apply the
-            skills I acquired through an intensive JavaScript Bootcamp. My
-            challenge is to provide valuable contributions to any project I am
-            involved in and meet the needs of the company.
+            I&apos;m a full stack developer eager to apply the skills I acquired
+            through an intensive JavaScript Bootcamp. I have experience working
+            on the frontend and backend. My challenge is to provide valuable
+            contributions to any project I am involved in and meet the needs of
+            the company. I&apos;m a team player and always ready to achieve new
+            goals.
           </p>
-
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
@@ -93,7 +99,7 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("certification")}
               active={tab === "certification"}
             >
-              Experience
+              Certification
             </TabButton>
           </div>
           <div className="mt-8">

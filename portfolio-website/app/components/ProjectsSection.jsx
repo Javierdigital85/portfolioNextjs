@@ -43,7 +43,7 @@ const projectsData = [
     id: 4,
     title: "Portfolio",
     description:
-      "This portfolio serves as a snapshot of my journey as a developer, showcasing a diverse range of projects that I've undertaken. Each project is a testament to my adaptability and dedication to mastering new technologies. Whether it's creating responsive web designs, developing interactive mobile apps, or implementing frontend and backend solutions.",
+      "This portfolio serves as a snapshot of my journey as a developer, showcasing a diverse range of projects that I've undertaken. Each project is a testament to my adaptability and dedication to learn and mastering new technologies. Whether it's creating responsive web designs, developing interactive mobile apps, or implementing frontend and backend solutions.",
     image: "/images/projects/portfolioUno.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/portfolioNextjs",
@@ -71,8 +71,11 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <section className="mt-36">
+      <h2
+        id="projects"
+        className="text-center text-4xl font-bold text-white mt-20 mb-8 md:mb-12"
+      >
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
