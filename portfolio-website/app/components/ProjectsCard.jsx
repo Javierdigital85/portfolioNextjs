@@ -21,6 +21,7 @@ const ProjectsCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             </p>
           </Link>
           <Link
+            target="_blank"
             href={previewUrl}
             className="h-24 w-24 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
           >
