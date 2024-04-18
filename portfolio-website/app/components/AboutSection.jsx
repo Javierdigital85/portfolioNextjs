@@ -63,13 +63,15 @@ const AboutSection = () => {
   return (
     <section className="text-white lg:h-[700px]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:py-10">
-        <Image
-          src="/images/nuevaimagen.avif"
-          width={900}
-          height={900}
-          alt="Lorenzo Javier Colodro's portrait"
-          className="rounded object-contain"
-        />
+        <div className="relative w-full h-[600px] md:h-[900px] sm:min-h-[300px]  mb-4 md:mb-0 sm:mb-2">
+          <Image
+            src="/images/nuevaimagen.avif"
+            width={900}
+            height={900}
+            alt="Lorenzo Javier Colodro's portrait"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-contain"
+          />
+        </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-4 mt-10">About Me </h2>
           <p className="text-base lg:text-lg">

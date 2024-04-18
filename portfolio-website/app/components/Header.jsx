@@ -31,7 +31,7 @@ const Header = () => {
 
         {/* IMAGEN */}
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[600px] relative overflow-hidden">
+          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[600px] relative overflow-hidden rounded-full">
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src={Picture}
