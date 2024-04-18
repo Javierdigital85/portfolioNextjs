@@ -106,10 +106,9 @@ const ProjectsSection = () => {
           >
             <ProjectsCard
               key={project.id}
+              imgUrl={project.image}
               title={project.title}
               description={project.description}
-              imgUrl={project.image}
-              // tags={project.tag}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />

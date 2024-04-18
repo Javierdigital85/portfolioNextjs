@@ -63,7 +63,7 @@ const AboutSection = () => {
   return (
     <section className="text-white lg:h-[700px]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:py-10">
-        <div className="relative w-full h-[600px] md:h-[900px] sm:min-h-[300px]  mb-4 md:mb-0 sm:mb-2">
+        <div className="relative w-full h-[600px] md:h-[850px] sm:min-h-[300px]  mb-4 md:mb-0 sm:mb-2">
           <Image
             src="/images/nuevaimagen.avif"
             width={900}
