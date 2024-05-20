@@ -13,9 +13,9 @@ const projectsData = [
     image: "/images/projects/tmdbImage.png",
     tag: ["All", "Web"],
     gitUrl:
-      "https://github.com/Javierdigital85/26-checkpoint-TMDB/tree/main/src",
+      "https://github.com/Javierdigital85/tmdb/tree/main/src",
     previewUrl:
-      "https://github.com/Javierdigital85/26-checkpoint-TMDB/tree/main/api",
+      "https://github.com/Javierdigital85/tmdb/tree/main/api",
   },
   {
     id: 2,
