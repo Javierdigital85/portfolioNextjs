@@ -12,10 +12,9 @@ const projectsData = [
       "The Movie Database is an app where you can see the latest films and series currently airing, as well as upcoming movies and series. Customers can register and easily store their favorite shows.",
     image: "/images/projects/tmdbImage.png",
     tag: ["All", "Web"],
-    gitUrl:
-      "https://github.com/Javierdigital85/tmdb/tree/main/src",
-    previewUrl:
-      "https://github.com/Javierdigital85/tmdb/tree/main/api",
+    gitUrl: "https://github.com/Javierdigital85/tmdb/tree/main/src",
+    previewUrl: "https://github.com/Javierdigital85/tmdb/tree/main/api",
+    web: "",
   },
   {
     id: 2,
@@ -28,6 +27,7 @@ const projectsData = [
     gitUrl:
       "https://github.com/hernanortiz18/houseOfDev-src/tree/develop/Front",
     previewUrl: "https://github.com/Javierdigital85/houseOfDev",
+    web: "",
   },
   {
     id: 3,
@@ -38,6 +38,7 @@ const projectsData = [
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/javiertrombetta/p5-box-front",
     previewUrl: "https://github.com/javiertrombetta/p5-box-back",
+    web: "",
   },
   {
     id: 4,
@@ -49,6 +50,18 @@ const projectsData = [
     gitUrl: "https://github.com/Javierdigital85/portfolioNextjs",
     previewUrl:
       "https://github.com/Javierdigital85/portfolioNextjs/tree/main/portfolio-website/app/api/send",
+    web: "https://lorenzojaviercolodro.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "To Do List",
+    description:
+      "This a to-do-app using the PERN stack.It also has a user registration and once registered you have to login to use the app.You can store many duties as you want and plans for your weekend and month.What I like about this project is that I have leart to implement testing.In the backend there are Unit Tests made with Jest and Integration testing with Supertest and Jest.For the frontend I worked with Cypress to do a E2E testing and try out every functionality for many users at the same time and works amazingly",
+    image: "/images/projects/toDoList.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Javierdigital85/Front-ToDoApp",
+    previewUrl: "https://github.com/Javierdigital85/Back-ToDoApp-",
+    web: "https://front-todoapp.onrender.com/",
   },
 ];
 
@@ -74,7 +87,7 @@ const ProjectsSection = () => {
     <section>
       <h2
         id="projects"
-        className="text-center text-4xl font-bold text-white mt-20 mb-8 md:mb-12"
+        className="text-center text-4xl font-bold text-white mt-40 mb-8 md:mb-12"
       >
         My Projects
       </h2>
@@ -111,6 +124,7 @@ const ProjectsSection = () => {
               description={project.description}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              web={project.web}
             />
           </motion.li>
         ))}

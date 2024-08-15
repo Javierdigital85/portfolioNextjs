@@ -24,6 +24,10 @@ const TAB_DATA = [
         <li>TypeScript</li>
         <li>Postman</li>
         <li>Docker</li>
+        <li>Jest</li>
+        <li>Supertest</li>
+        <li>Cypress</li>
+        <li>Swagger</li>
       </ul>
     ),
   },

@@ -2,7 +2,14 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 
-const ProjectsCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectsCard = ({
+  imgUrl,
+  title,
+  description,
+  gitUrl,
+  previewUrl,
+  web,
+}) => {
   return (
     <div>
       <div
@@ -30,6 +37,19 @@ const ProjectsCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             </p>
             {/* <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" /> */}
           </Link>
+          {web ? (
+            <Link
+              target="_blank"
+              href={web}
+              className="h-24 w-24 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            >
+              <p className="h-18 w-15 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white">
+                Deployed
+              </p>
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
