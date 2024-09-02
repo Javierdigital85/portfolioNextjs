@@ -1,7 +1,7 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
-import "../styles/tarjeta.css"
+import "../styles/tarjeta.css";
 
 const ProjectsCard = ({
   imgUrl,
