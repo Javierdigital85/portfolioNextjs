@@ -21,7 +21,7 @@ const projectsData = [
     title: "House of Dev",
     description:
       "House Of Dev App is an application where you can rent or buy properties within Argentina and visit the properties that the customer is interested in.",
-    image: "/images/projects/houseOfDevOne.png",
+    image: "/images/projects/houseOfDev.png",
 
     tag: ["All", "Web"],
     gitUrl:
@@ -45,7 +45,7 @@ const projectsData = [
     title: "Portfolio",
     description:
       "This portfolio serves as a snapshot of my journey as a developer, showcasing a diverse range of projects that I've undertaken. Each project is a testament to my adaptability and dedication to learn and mastering new technologies. Whether it's creating responsive web designs, developing interactive mobile apps, or implementing frontend and backend solutions.",
-    image: "/images/projects/portfolioUno.png",
+    image: "/images/projects/portfolioia.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/portfolioNextjs",
     previewUrl:
@@ -57,11 +57,22 @@ const projectsData = [
     title: "To Do List",
     description:
       "This a to-do-app using the PERN stack.It also has a user registration and once registered you have to login to use the app.You can store many duties as you want and plans for your weekend and month.What I like about this project is that I have leart to implement testing.In the backend there are Unit Tests made with Jest and Integration testing with Supertest and Jest.For the frontend I worked with Cypress to do a E2E testing and try out every functionality for many users at the same time and works amazingly",
-    image: "/images/projects/toDoList.png",
+    image: "/images/projects/todolist.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/Front-ToDoApp",
     previewUrl: "https://github.com/Javierdigital85/Back-ToDoApp-",
     web: "https://front-todoapp.onrender.com/",
+  },
+  {
+    id: 6,
+    title: "My favourites videos",
+    description:
+      "This is a video gallery where you can store all your favorite videos and manage your personal video preferences. The technologies I implemented includes React Vite, Node.js, PostgreSQL, Tailwind CSS, and TypeScript.",
+    image: "/images/projects/videos.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Javierdigital85/front-videos-reactvite-typescript-tailwind",
+    previewUrl: "https://github.com/Javierdigital85/back-videos-node-postgres-typescript",
+    web: "https://front-videos-reactvite-typescript.onrender.com",
   },
 ];
 

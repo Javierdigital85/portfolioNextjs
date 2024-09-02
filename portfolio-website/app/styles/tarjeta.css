@@ -1,0 +1,8 @@
+.tarjeta {
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+.tarjeta:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 20px;
+}
