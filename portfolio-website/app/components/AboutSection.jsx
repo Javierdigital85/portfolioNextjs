@@ -2,7 +2,6 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
 const TAB_DATA = [
   {
