@@ -61,7 +61,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/Front-ToDoApp",
     previewUrl: "https://github.com/Javierdigital85/Back-ToDoApp-",
-    web: "https://front-todoapp.onrender.com/",
+    web: "",
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ const projectsData = [
       "https://github.com/Javierdigital85/front-videos-reactvite-typescript-tailwind",
     previewUrl:
       "https://github.com/Javierdigital85/back-videos-node-postgres-typescript",
-    web: "https://front-videos-reactvite-typescript.onrender.com",
+    web: "",
   },
 ];
 
