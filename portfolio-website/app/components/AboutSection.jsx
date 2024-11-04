@@ -9,24 +9,39 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SASS</li>
         <li>JavaScript</li>
+        <li>Node.js</li>
         <li>React</li>
         <li>Redux</li>
-        <li>Node.js</li>
+        <li>React-Router-Dom</li>
         <li>Express</li>
         <li>PostgreSQL</li>
         <li>Sequelize</li>
-        <li>Nest</li>
+        <li>Prisma</li>
         <li>MongoDB</li>
         <li>Tailwind</li>
+        <li>Sooner</li>
+        <li>Toastify</li>
         <li>Bootstrap</li>
         <li>TypeScript</li>
         <li>Postman</li>
         <li>Docker</li>
+        <li>Table Plus</li>
         <li>Jest</li>
         <li>Supertest</li>
         <li>Cypress</li>
+        <li>Cloudinary</li>
+        <li>Bcryptjs</li>
+        <li>JsonWebToken</li>
+        <li>Joi</li>
+        <li>Node Mailer</li>
+        <li>Resend</li>
         <li>Swagger</li>
+        <li>Render</li>
+        <li>Versel</li>
       </ul>
     ),
   },
@@ -64,7 +79,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white lg:h-[700px]" id="about">
+    <section className="text-white lg:min-h-[800px] mb-10" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:py-10">
         <div className="relative w-full h-[600px] md:h-[850px] sm:min-h-[300px]  mb-4 md:mb-0 sm:mb-2">
           <Image

@@ -56,7 +56,7 @@ const projectsData = [
     id: 5,
     title: "To Do List",
     description:
-      "This a to-do-app using the PERN stack.It also has a user registration and once registered you have to login to use the app.You can store many duties as you want and plans for your weekend and month.What I like about this project is that I have leart to implement testing.In the backend there are Unit Tests made with Jest and Integration testing with Supertest and Jest.For the frontend I worked with Cypress to do a E2E testing and try out every functionality for many users at the same time and works amazingly",
+      "This is a to-do-app using the PERN stack.It also has a user registration and once registered you have to login to use the app.You can store many duties as you want and plans for your weekend and month.What I like about this project is that I have leart to implement testing.In the backend there are Unit Tests made with Jest and Integration testing with Supertest and Jest.For the frontend I worked with Cypress to do a E2E testing and try out every functionality for many users at the same time and works amazingly",
     image: "/images/projects/doalist.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/Front-ToDoApp",
@@ -74,6 +74,20 @@ const projectsData = [
       "https://github.com/Javierdigital85/front-videos-reactvite-typescript-tailwind",
     previewUrl:
       "https://github.com/Javierdigital85/back-videos-node-postgres-typescript",
+    web: "",
+  },
+  // comunidad Perros & Gatos
+  {
+    id: 7,
+    title: "Comunidad Perros&Gatos",
+    description:
+      "This is an international collaborative project involving team members from different countries, where we developed an adoption app. In this app, users can register, log in, request adoptions from shelters, and approve or disapprove applications. The main technologies we implemented include React Vite, Node.js, PostgreSQL, Material UI, and TypeScript.",
+    image: "/images/projects/perros&gatos.png",
+    tag: ["All", "Web"],
+    gitUrl:
+      "https://github.com/No-Country-simulation/c21-18-m-node-react/tree/develop/frontend",
+    previewUrl:
+      "https://github.com/No-Country-simulation/c21-18-m-node-react/tree/develop/backend",
     web: "",
   },
 ];
@@ -97,7 +111,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section>
+    <section className="py-10 lg:min-h-[800px]">
       <h2
         id="projects"
         className="text-center text-4xl font-bold text-white mt-40 mb-8 md:mb-12"
@@ -121,7 +135,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
