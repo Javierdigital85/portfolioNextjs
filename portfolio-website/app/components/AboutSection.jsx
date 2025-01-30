@@ -18,7 +18,9 @@ const TAB_DATA = [
         <li>Redux</li>
         <li>React-Router-Dom</li>
         <li>Express</li>
+        <li>Nest</li>
         <li>PostgreSQL</li>
+        <li>TypeORM</li>
         <li>Sequelize</li>
         <li>Prisma</li>
         <li>MongoDB</li>
@@ -60,8 +62,13 @@ const TAB_DATA = [
     id: "certification",
     content: (
       <ul className="list-disc pl-2">
-        <li>JavaScript Bootcamp.</li>
         <li>Programación Web FullStack</li>
+        <li>JavaScript Bootcamp</li>
+        <li>Backend Developer Certification by No Country</li>
+        <li>
+          Winner Hackathon Certification as a Backend Developer by No Country
+        </li>
+        <li>Hackathon Certification of Proof of Sof Skills by No Country</li>
         <li>Service Excellence Program & SEP Qatar Airways</li>
       </ul>
     ),

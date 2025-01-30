@@ -90,6 +90,17 @@ const projectsData = [
       "https://github.com/No-Country-simulation/c21-18-m-node-react/tree/develop/backend",
     web: "",
   },
+  {
+    id: 8,
+    title: "Klowhub",
+    description:
+      "Klowhub is an innovative educational platform where users can create projects, purchase courses, and access applications, fostering a dynamic learning ecosystem. Designed as part of a Hackathon challenge, Klowhub aims to provide an interactive space for knowledge sharing, skill development, and collaboration within a digital environment.",
+      image:"/images/projects/klowHub4.png",
+      tag:["All","Web","Mobile"],
+      gitUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/frontend",
+      previewUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/backend",
+
+  },
 ];
 
 const ProjectsSection = () => {
@@ -135,7 +146,10 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      <ul
+        ref={ref}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
