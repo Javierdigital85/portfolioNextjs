@@ -95,7 +95,7 @@ const projectsData = [
     title: "Klowhub",
     description:
       "Klowhub is an innovative educational platform where users can create projects, purchase courses, and access applications, fostering a dynamic learning ecosystem. Designed as part of a Hackathon challenge, Klowhub aims to provide an interactive space for knowledge sharing, skill development, and collaboration within a digital environment.",
-      image:"/images/projects/klowHub4.png",
+      image:"/images/projects/klowhub.png",
       tag:["All","Web","Mobile"],
       gitUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/frontend",
       previewUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/backend",
