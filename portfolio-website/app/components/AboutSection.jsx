@@ -54,14 +54,13 @@ const SkillsList = ({ skills }) => {
     >
       {skills.map((skill, index) => (
         <div key={index} className="flex items-center">
-          <span className="text-blue-400 mr-3 text-sm">•</span>
-          <span className="text-white text-sm sm:text-base">{skill}</span>
+          <span className="text-blue-400 mr-3">•</span>
+          <span>{skill}</span>
         </div>
       ))}
     </div>
   );
 };
-
 const TAB_DATA = [
   {
     title: "Skills",
