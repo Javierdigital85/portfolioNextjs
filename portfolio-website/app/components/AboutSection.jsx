@@ -3,49 +3,70 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
+// Skills data array for better management
+const SKILLS_DATA = [
+  "HTML",
+  "CSS",
+  "SASS",
+  "JavaScript",
+  "Node.js",
+  "React",
+  "Redux",
+  "React-Router-Dom",
+  "Express",
+  "Nest",
+  "PostgreSQL",
+  "TypeORM",
+  "Sequelize",
+  "Prisma",
+  "MongoDB",
+  "Tailwind",
+  "Sooner",
+  "Toastify",
+  "Bootstrap",
+  "TypeScript",
+  "Postman",
+  "Docker",
+  "Table Plus",
+  "Jest",
+  "Supertest",
+  "Cypress",
+  "Cloudinary",
+  "Bcryptjs",
+  "JsonWebToken",
+  "Joi",
+  "Node Mailer",
+  "Resend",
+  "Swagger",
+  "Render",
+  "Vercel",
+];
+
+// Component for rendering skills in responsive columns
+const SkillsList = ({ skills }) => {
+  const shouldUseColumns = skills.length > 10;
+
+  return (
+    <div
+      className={`grid gap-y-2 ${
+        shouldUseColumns ? "grid-cols-1 sm:grid-cols-2 gap-x-6" : "grid-cols-1"
+      }`}
+    >
+      {skills.map((skill, index) => (
+        <div key={index} className="flex items-center">
+          <span className="text-blue-400 mr-3 text-sm">•</span>
+          <span className="text-white text-sm sm:text-base">{skill}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>JavaScript</li>
-        <li>Node.js</li>
-        <li>React</li>
-        <li>Redux</li>
-        <li>React-Router-Dom</li>
-        <li>Express</li>
-        <li>Nest</li>
-        <li>PostgreSQL</li>
-        <li>TypeORM</li>
-        <li>Sequelize</li>
-        <li>Prisma</li>
-        <li>MongoDB</li>
-        <li>Tailwind</li>
-        <li>Sooner</li>
-        <li>Toastify</li>
-        <li>Bootstrap</li>
-        <li>TypeScript</li>
-        <li>Postman</li>
-        <li>Docker</li>
-        <li>Table Plus</li>
-        <li>Jest</li>
-        <li>Supertest</li>
-        <li>Cypress</li>
-        <li>Cloudinary</li>
-        <li>Bcryptjs</li>
-        <li>JsonWebToken</li>
-        <li>Joi</li>
-        <li>Node Mailer</li>
-        <li>Resend</li>
-        <li>Swagger</li>
-        <li>Render</li>
-        <li>Versel</li>
-      </ul>
-    ),
+    content: <SkillsList skills={SKILLS_DATA} />,
   },
   {
     title: "Education",
@@ -87,19 +108,27 @@ const AboutSection = () => {
 
   return (
     <section className="text-white lg:min-h-[800px] mb-10" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:py-10">
-        <div className="relative w-full h-[600px] md:h-[850px] sm:min-h-[300px]  mb-4 md:mb-0 sm:mb-2">
-          <Image
-            src="/images/nuevaimagen.avif"
-            width={900}
-            height={900}
-            alt="Lorenzo Javier Colodro's portrait"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-contain"
-          />
+      <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:py-10">
+        {/* Profile Image Container - Fixed positioning to prevent movement */}
+        <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mb-6 md:mb-0 flex-shrink-0">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
+              <Image
+                src="/images/nuevaimagen.avif"
+                fill
+                alt="Lorenzo Javier Colodro's portrait"
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
         </div>
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold mb-4 mt-10">About Me </h2>
-          <p className="text-base lg:text-lg">
+        {/* Content Section - Fixed height to prevent image movement */}
+        <div className="text-left flex flex-col min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mt-6 sm:mt-10">
+            About Me{" "}
+          </h2>
+          <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
             I&apos;m a full stack developer eager to apply the skills I acquired
             through an intensive JavaScript Bootcamp. I have experience working
             on the frontend and backend. My challenge is to provide valuable
@@ -107,7 +136,7 @@ const AboutSection = () => {
             the company. I&apos;m a team player and always ready to achieve new
             goals.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mt-4 sm:mt-6">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -129,7 +158,8 @@ const AboutSection = () => {
               Certification
             </TabButton>
           </div>
-          <div className="mt-8">
+          {/* Tab Content Container - Fixed height to prevent layout shifts */}
+          <div className="mt-4 sm:mt-6 min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
