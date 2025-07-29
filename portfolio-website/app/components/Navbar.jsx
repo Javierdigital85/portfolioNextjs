@@ -81,7 +81,9 @@ const Navbar = () => {
         </div>
         {/* aca tenia el codigo comentado codigo dos*/}
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? (
+        <MenuOverlay links={navLinks} onLinkClick={() => setNavbar(false)} />
+      ) : null}
     </nav>
   );
 };
