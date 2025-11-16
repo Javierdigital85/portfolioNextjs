@@ -14,7 +14,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/tmdb/tree/main/src",
     previewUrl: "https://github.com/Javierdigital85/tmdb/tree/main/api",
-    web: "",
+    web: "https://tmdb-app-gfkr.onrender.com/",
   },
   {
     id: 2,
@@ -67,14 +67,14 @@ const projectsData = [
     id: 6,
     title: "My favourites videos",
     description:
-      "This is a video gallery where you can store all your favorite videos and manage your personal video preferences. The technologies I implemented includes React Vite, Node.js, PostgreSQL, Tailwind CSS, and TypeScript.",
+      "This is a video gallery where you can store all your favorite videos and manage your personal video preferences by copy and paste the video url. The technologies I implemented includes React Vite, Node.js, PostgreSQL, Tailwind CSS, and TypeScript.",
     image: "/images/projects/videos.png",
     tag: ["All", "Web"],
     gitUrl:
       "https://github.com/Javierdigital85/front-videos-reactvite-typescript-tailwind",
     previewUrl:
       "https://github.com/Javierdigital85/back-videos-node-postgres-typescript",
-    web: "",
+    web: "https://front-videos-reactvite-typescript.onrender.com",
   },
   // comunidad Perros & Gatos
   {
@@ -100,6 +100,17 @@ const projectsData = [
       gitUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/frontend",
       previewUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/backend",
 
+  },
+    {
+    id: 9,
+    title: "Pokemon App",
+    description:
+      "This is a pokemon game where you have to guess the pokemon by their image.The appication was developed with VUE.JS Traditional: Options API.",
+      image:"/images/projects/charmanderOff.png",
+      tag:["All","Web","Mobile"],
+      gitUrl:"https://github.com/Javierdigital85/vue-pokemon-game",
+      previewUrl:"https://github.com/Javierdigital85/vue-pokemon-game",
+      web: "https://vue-pokemon-game-selection.netlify.app/",
   },
 ];
 

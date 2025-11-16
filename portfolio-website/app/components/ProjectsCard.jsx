@@ -17,8 +17,8 @@ const ProjectsCard = ({
       <div
         className="image-container h-52 md:h-80 rounded-t-xl relative group"
         style={{
-          background: `url(${imgUrl}) center center/cover no-repeat`,
-          height: "400px"
+          background: `url(${imgUrl}) center center/contain no-repeat`,
+          height: "400px",
         }}
       >
         {/* <Image
