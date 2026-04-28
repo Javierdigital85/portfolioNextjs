@@ -81,7 +81,7 @@ const ProjectsCard = ({
         {tag
           .filter((t) => t !== "All")
           .map((t, i) => (
-            <span className="text-sm px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">{t}</span>
+            <span key={i} className="text-sm px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">{t}</span>
           ))}
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
