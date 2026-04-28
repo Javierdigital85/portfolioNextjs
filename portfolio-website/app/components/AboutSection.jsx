@@ -3,93 +3,112 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
-// Skills data array for better management
 const SKILLS_DATA = [
-  "HTML",
-  "CSS",
-  "SASS",
-  "JavaScript",
-  "Node.js",
-  "React",
-  "Redux",
-  "React-Router-Dom",
-  "Express",
-  "Nest",
-  "PostgreSQL",
-  "TypeORM",
-  "Sequelize",
-  "Prisma",
-  "MongoDB",
-  "Tailwind",
-  "Sooner",
-  "Toastify",
-  "Bootstrap",
-  "TypeScript",
-  "Postman",
-  "Docker",
-  "Table Plus",
-  "Jest",
-  "Supertest",
-  "Cypress",
-  "Cloudinary",
-  "Bcryptjs",
-  "JsonWebToken",
-  "Joi",
-  "Node Mailer",
-  "Resend",
-  "Swagger",
-  "Render",
-  "Vercel",
+  { name: "HTML", category: "Frontend" },
+  { name: "CSS / SASS", category: "Frontend" },
+  { name: "JavaScript", category: "Frontend" },
+  { name: "TypeScript", category: "Frontend" },
+  { name: "React", category: "Frontend" },
+  { name: "React Context", category: "Frontend" },
+  { name: "Redux", category: "Frontend" },
+  { name: "Tailwind", category: "Frontend" },
+  { name: "Bootstrap", category: "Frontend" },
+  { name: "Node.js", category: "Backend" },
+  { name: "Express", category: "Backend" },
+  { name: "Nest", category: "Backend" },
+  { name: "PostgreSQL", category: "Backend" },
+  { name: "MongoDB", category: "Backend" },
+  { name: "TypeORM / Prisma", category: "Backend" },
+  { name: "JWT / Bcrypt", category: "Backend" },
+  { name: "Swagger", category: "Backend" },
+  { name: "Jest / Supertest", category: "Testing" },
+  { name: "Cypress", category: "Testing" },
+  { name: "Docker", category: "DevOps" },
+  { name: "Vercel / Render", category: "DevOps" },
+  { name: "Cloudinary", category: "DevOps" },
+  { name: "AWS CDK", category: "AWS" },
+  { name: "AWS Lambda", category: "AWS" },
+  { name: "API Gateway", category: "AWS" },
+  { name: "DynamoDB", category: "AWS" },
+  { name: "AWS Cognito", category: "AWS" },
+  { name: "AWS Amplify", category: "AWS" },
+  { name: "SNS", category: "AWS" },
+  { name: "CloudWatch", category: "AWS" },
+  { name: "IAM", category: "AWS" },
+  { name: "Secrets Manager", category: "AWS" },
+  { name: "Postman", category: "Tools" },
+  { name: "AWS Toolkit", category: "Tools" },
+  { name: "Kiro", category: "Tools" },
+  { name: "Thunder Client", category: "Tools" },
+  { name: "AWS CLI", category: "Tools" },
 ];
 
-// Component for rendering skills in responsive columns
-const SkillsList = ({ skills }) => {
-  const shouldUseColumns = skills.length > 10;
-
-  return (
-    <div
-      className={`grid gap-y-2 ${
-        shouldUseColumns ? "grid-cols-1 sm:grid-cols-2 gap-x-6" : "grid-cols-1"
-      }`}
-    >
-      {skills.map((skill, index) => (
-        <div key={index} className="flex items-center">
-          <span className="text-blue-400 mr-3">•</span>
-          <span>{skill}</span>
-        </div>
-      ))}
-    </div>
-  );
+const CATEGORY_COLORS = {
+  Frontend: "bg-blue-500/20 text-blue-300 border border-blue-500/30",
+  Backend: "bg-purple-500/20 text-purple-300 border border-purple-500/30",
+  Testing: "bg-green-500/20 text-green-300 border border-green-500/30",
+  DevOps: "bg-orange-500/20 text-orange-300 border border-orange-500/30",
+  AWS: "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30",
+  Tools: "bg-pink-500/20 text-pink-300 border border-pink-500/30",
 };
+
+const SkillsList = () => (
+  <div className="flex flex-wrap gap-2">
+    {SKILLS_DATA.map((skill, i) => (
+      <span
+        key={i}
+        className={`text-xs font-medium px-3 py-1 rounded-full ${CATEGORY_COLORS[skill.category]}`}
+      >
+        {skill.name}
+      </span>
+    ))}
+  </div>
+);
+
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
-    content: <SkillsList skills={SKILLS_DATA} />,
+    content: <SkillsList />,
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Plataforma 5 Coding Bootcamp.</li>
-        <li>Cabin Crew Certification in Qatar Airways.</li>
+      <ul className="space-y-4">
+        {[
+          { title: "Plataforma 5 Coding Bootcamp", sub: "Full Stack JavaScript Developer" },
+          { title: "Cabin Crew Certification", sub: "Qatar Airways" },
+        ].map((item, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <span className="mt-1 w-2 h-2 rounded-full bg-blue-400 flex-shrink-0" />
+            <div>
+              <p className="font-semibold text-white">{item.title}</p>
+              <p className="text-sm text-[#ADB7BE]">{item.sub}</p>
+            </div>
+          </li>
+        ))}
       </ul>
     ),
   },
   {
-    title: "Certification",
+    title: "Certifications",
     id: "certification",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Programación Web FullStack</li>
-        <li>JavaScript Bootcamp</li>
-        <li>Backend Developer Certification by No Country</li>
-        <li>
-          Winner Hackathon Certification as a Backend Developer by No Country
-        </li>
-        <li>Hackathon Certification of Proof of Sof Skills by No Country</li>
-        <li>Service Excellence Program & SEP Qatar Airways</li>
+      <ul className="space-y-3">
+        {[
+          "Programación Web FullStack",
+          "JavaScript Bootcamp",
+          "Backend Developer Certification — No Country",
+          "🏆 Winner Hackathon — Backend Developer, No Country",
+          "Proof of Soft Skills — No Country",
+          "Service Excellence Program (SEP) — Qatar Airways",
+        ].map((cert, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <span className="mt-1 w-2 h-2 rounded-full bg-blue-400 flex-shrink-0" />
+            <p className="text-sm text-[#ADB7BE]">{cert}</p>
+          </li>
+        ))}
       </ul>
     ),
   },
@@ -100,18 +119,16 @@ const AboutSection = () => {
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
+    startTransition(() => setTab(id));
   };
 
   return (
     <section className="text-white lg:min-h-[800px] mb-10" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:py-10">
-        {/* Profile Image Container - Fixed positioning to prevent movement */}
+        {/* Image */}
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mb-6 md:mb-0 flex-shrink-0">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
+            <div className="relative w-[340px] h-[340px] sm:w-[450px] sm:h-[450px] md:w-[520px] md:h-[520px] lg:w-[620px] lg:h-[620px]">
               <Image
                 src="/images/nuevaimagen.avif"
                 fill
@@ -122,43 +139,50 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-        {/* Content Section - Fixed height to prevent image movement */}
-        <div className="text-left flex flex-col min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mt-6 sm:mt-10">
-            About Me{" "}
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-            I&apos;m a full stack developer eager to apply the skills I acquired
-            through an intensive JavaScript Bootcamp. I have experience working
-            on the frontend and backend. My challenge is to provide valuable
-            contributions to any project I am involved in and meet the needs of
-            the company. I&apos;m a team player and always ready to achieve new
-            goals.
-          </p>
-          <div className="flex flex-row justify-start mt-4 sm:mt-6">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills
-            </TabButton>
 
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              Education
-            </TabButton>
-
-            <TabButton
-              selectTab={() => handleTabChange("certification")}
-              active={tab === "certification"}
-            >
-              Certification
-            </TabButton>
+        {/* Content */}
+        <div className="flex flex-col justify-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
+          <div className="w-fit mb-5 mt-6 sm:mt-10">
+            <h2 className="text-3xl sm:text-4xl font-bold">About Me</h2>
+            <div className="h-1 bg-blue-500 rounded mt-2" />
           </div>
-          {/* Tab Content Container - Fixed height to prevent layout shifts */}
-          <div className="mt-4 sm:mt-6 min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
+
+          <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#ADB7BE] mb-6">
+            I&apos;m a <span className="text-white font-semibold">Full Stack Developer</span> passionate about building
+            scalable, user-friendly applications. With experience across the full stack — from crafting
+            responsive UIs to designing robust APIs — I bring a collaborative mindset and a drive to
+            deliver real value in every project I join.
+          </p>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-3 gap-4 mb-6">
+            {[
+              { value: "10+", label: "Projects" },
+              { value: "2+", label: "Years Exp." },
+              { value: "5+", label: "Tech Stacks" },
+            ].map((stat, i) => (
+              <div key={i} className="bg-[#181818] rounded-xl p-3 text-center border border-[#2a2a2a]">
+                <p className="text-2xl font-bold text-blue-400">{stat.value}</p>
+                <p className="text-xs text-[#ADB7BE] mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Tabs */}
+          <div className="flex flex-row justify-start gap-1 mb-4">
+            {TAB_DATA.map((t) => (
+              <TabButton
+                key={t.id}
+                selectTab={() => handleTabChange(t.id)}
+                active={tab === t.id}
+              >
+                {t.title}
+              </TabButton>
+            ))}
+          </div>
+
+          {/* Tab content */}
+          <div className="bg-[#181818] rounded-xl p-4 border border-[#2a2a2a] min-h-[180px]">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

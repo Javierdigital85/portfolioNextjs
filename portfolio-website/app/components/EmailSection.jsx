@@ -54,12 +54,14 @@ const EmailSection = () => {
 
   return (
     <>
-      <h1
-        className="text-white mt-20 text-4xl text-center font-bold"
-        id="contact"
-      >
-        Contact
-      </h1>
+      <div className="flex justify-center mt-20">
+        <div className="inline-block">
+          <h1 className="text-white text-4xl text-center font-bold" id="contact">
+            Contact
+          </h1>
+          <div className="h-1 bg-blue-500 rounded mt-2" />
+        </div>
+      </div>
       <section className="grid md:grid-cols-2 my-12 md:my-12 py-2 gap-4">
         {/* <h1 className="text-white">Hola</h1> */}
         <div>

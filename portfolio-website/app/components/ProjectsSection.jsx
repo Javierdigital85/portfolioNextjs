@@ -61,7 +61,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Javierdigital85/Front-ToDoApp",
     previewUrl: "https://github.com/Javierdigital85/Back-ToDoApp-",
-    web: "",
+    web: "https://front-todoapp.onrender.com",
   },
   {
     id: 6,
@@ -95,22 +95,47 @@ const projectsData = [
     title: "Klowhub",
     description:
       "Klowhub is an innovative educational platform where users can create projects, purchase courses, and access applications, fostering a dynamic learning ecosystem. Designed as part of a Hackathon challenge, Klowhub aims to provide an interactive space for knowledge sharing, skill development, and collaboration within a digital environment.",
-      image:"/images/projects/klowhub.png",
-      tag:["All","Web","Mobile"],
-      gitUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/frontend",
-      previewUrl:"https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/backend",
-
+    image: "/images/projects/klowhub.png",
+    tag: ["All", "Web", "Mobile"],
+    gitUrl:
+      "https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/frontend",
+    previewUrl:
+      "https://github.com/No-Country-simulation/h3-03-klowhub/tree/main/backend",
   },
-    {
+  {
     id: 9,
     title: "Pokemon App",
     description:
       "This is a pokemon game where you have to guess the pokemon by their image.The appication was developed with VUE.JS Traditional: Options API.",
-      image:"/images/projects/charmanderOff.png",
-      tag:["All","Web","Mobile"],
-      gitUrl:"https://github.com/Javierdigital85/vue-pokemon-game",
-      previewUrl:"https://github.com/Javierdigital85/vue-pokemon-game",
-      web: "https://vue-pokemon-game-selection.netlify.app/",
+    image: "/images/projects/charmanderOff.png",
+    tag: ["All", "Web", "Mobile"],
+    gitUrl: "https://github.com/Javierdigital85/vue-pokemon-game",
+    previewUrl: "https://github.com/Javierdigital85/vue-pokemon-game",
+    web: "https://vue-pokemon-game-selection.netlify.app/",
+  },
+  {
+    id: 9,
+    title: "Music Ecommerce instruments",
+    description:
+      "This is a fullstack e-commerce application built with a modern stack: Node.js (Express) for the backend, React 19 with Vite and Tailwind CSS for the frontend, and PostgreSQL for data storage. The platform features user authentication, product management, shopping cart functionality, order processing, and secure payment integration with MercadoPago. It also includes a Large Language Model (LLM)-powered chatbot for enhanced customer support and product search. The project leverages TypeScript, DaisyUI, and cloud services for media management, providing a scalable and responsive shopping experience.",
+    image: "/images/projects/musicEcommerce.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.dev/Javierdigital85/Frontend-ecommerce",
+    previewUrl: "https://github.dev/Javierdigital85/Backend-ecommerce",
+    web: "",
+    inDevelopment: true,
+  },
+  {
+    id: 10,
+    title: "Travel World",
+    description:
+      "This is a fullstack travel e-commerce application built with React, AWS CDK, and serverless technologies. It features user authentication with Cognito, product and booking management, a personalized travel experience, shopping cart functionality, and a modern, responsive design.",
+    image: "/images/projects/travelWorldPicture.png",
+    tag: ["All", "Web", "Mobile", "AWS Serverless"],
+    gitUrl: "https://github.com/Javierdigital85/front-webapp",
+    previewUrl: "https://github.com/Javierdigital85/infra-webapp",
+    web: "",
+    inDevelopment: true,
   },
 ];
 
@@ -124,7 +149,7 @@ const ProjectsSection = () => {
   };
 
   const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
+    project.tag.includes(tag),
   );
 
   const cardVariants = {
@@ -134,12 +159,14 @@ const ProjectsSection = () => {
 
   return (
     <section className="py-10 lg:min-h-[800px]">
-      <h2
-        id="projects"
-        className="text-center text-4xl font-bold text-white mt-40 mb-8 md:mb-12"
-      >
-        My Projects
-      </h2>
+      <div className="flex justify-center mt-40 mb-8 md:mb-12">
+        <div className="inline-block">
+          <h2 id="projects" className="text-center text-4xl font-bold text-white">
+            My Projects
+          </h2>
+          <div className="h-1 bg-blue-500 rounded mt-2" />
+        </div>
+      </div>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
@@ -155,6 +182,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="AWS Serverless"
+          isSelected={tag === "AWS Serverless"}
         />
       </div>
       <ul
@@ -177,6 +209,8 @@ const ProjectsSection = () => {
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
               web={project.web}
+              inDevelopment={project.inDevelopment}
+              tag={project.tag}
             />
           </motion.li>
         ))}
