@@ -46,7 +46,7 @@ const Header = () => {
               <button className="px-1 py-1 w-full rounded-full bg-gradient-to-br from-blue-500 via-blue-450 to-blue-500 hover:bg-slate-800 text-white transition-all duration-300">
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 transition-all duration-300">
                   <a
-                    href="/Javier-Colodro.pdf"
+                    href="/LorenzoJavierColodro.pdf"
                     download="JavierColodroCV"
                     className="text-white no-underline"
                   >
@@ -85,7 +85,7 @@ const Header = () => {
                 <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-blue-450 to-blue-500 hover:bg-slate-800 text-white transition-all duration-300">
                   <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 transition-all duration-300">
                     <a
-                      href="/Javier-Colodro.pdf"
+                      href="/LorenzoJavierColodro.pdf"
                       download="JavierColodroCV"
                       className="text-white no-underline"
                     >
