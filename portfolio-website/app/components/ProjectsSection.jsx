@@ -158,8 +158,8 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-10 lg:min-h-[800px]">
-      <div className="flex justify-center mt-40 mb-8 md:mb-12">
+    <section className="py-6">
+      <div className="flex justify-center mt-10 mb-6 md:mb-8">
         <div className="inline-block">
           <h2 id="projects" className="text-center text-4xl font-bold text-white">
             My Projects
