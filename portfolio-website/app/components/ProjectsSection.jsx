@@ -122,8 +122,8 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.dev/Javierdigital85/Frontend-ecommerce",
     previewUrl: "https://github.dev/Javierdigital85/Backend-ecommerce",
-    web: "",
-    inDevelopment: true,
+    web: "https://frontend-ecommerce-h7j0.onrender.com",
+    inDevelopment: false,
   },
   {
     id: 10,
