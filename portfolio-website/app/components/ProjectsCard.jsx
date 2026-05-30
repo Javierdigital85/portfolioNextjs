@@ -29,7 +29,7 @@ const ProjectsCard = ({
         }}
       >
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
-          {inDevelopment ? (
+          {gitUrl && (inDevelopment ? (
             <span className="h-24 w-24 mr-2 border-2 relative rounded-full border-[#ADB7BE] opacity-40 cursor-not-allowed flex items-center justify-center">
               <p className="text-[#ADB7BE] text-center text-xs">FRONTEND</p>
             </span>
@@ -43,7 +43,7 @@ const ProjectsCard = ({
                 FRONTEND
               </p>
             </Link>
-          )}
+          ))}
           {inDevelopment ? (
             <span className="h-24 w-24 border-2 relative rounded-full border-[#ADB7BE] opacity-40 cursor-not-allowed flex items-center justify-center">
               <p className="text-[#ADB7BE] text-center text-xs">BACKEND</p>

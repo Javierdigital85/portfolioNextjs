@@ -125,8 +125,19 @@ const projectsData = [
     web: "https://frontend-ecommerce-h7j0.onrender.com",
     inDevelopment: false,
   },
-  {
+    {
     id: 10,
+    title: "Pizzeria AWS CDK",
+    description:
+      "A serverless pizza-ordering backend built with AWS CDK in TypeScript. It exposes a REST API to create and retrieve orders, processing them asynchronously through an event-driven pipeline using API Gateway, Lambda, DynamoDB, and SQS. Orders flow through queues and streams to be prepared and dispatched automatically.",
+    image: "/images/projects/aws-cdk-pizza.png",
+    tag: ["All", "AWS Serverless"],
+    gitUrl: "",
+    previewUrl: "https://github.com/Javierdigital85/pizzeria-aws-cdk",
+    web: "",
+  },
+  {
+    id: 11,
     title: "Travel World",
     description:
       "This is a fullstack travel e-commerce application built with React, AWS CDK, and serverless technologies. It features user authentication with Cognito, product and booking management, a personalized travel experience, shopping cart functionality, and a modern, responsive design.",
@@ -137,6 +148,7 @@ const projectsData = [
     web: "",
     inDevelopment: true,
   },
+
 ];
 
 const ProjectsSection = () => {
@@ -161,7 +173,10 @@ const ProjectsSection = () => {
     <section className="py-6">
       <div className="flex justify-center mt-10 mb-6 md:mb-8">
         <div className="inline-block">
-          <h2 id="projects" className="text-center text-4xl font-bold text-white">
+          <h2
+            id="projects"
+            className="text-center text-4xl font-bold text-white"
+          >
             My Projects
           </h2>
           <div className="h-1 bg-blue-500 rounded mt-2" />
